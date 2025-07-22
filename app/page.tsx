@@ -55,15 +55,17 @@ export default function HomePage() {
               size="lg"
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-3 text-lg"
             >
-              Explore Courses
+              <a href="#courses">
+                Explore Courses
+              </a>
             </Button>
-            <Button
+            {/* <Button
               size="lg"
               variant="outline"
               className="border-orange-300 text-orange-700 hover:bg-orange-50 px-8 py-3 text-lg bg-transparent"
             >
               Learn More
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
@@ -132,19 +134,19 @@ export default function HomePage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-orange-200 to-pink-200 rounded-2xl p-8">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/profile-nicole.jpg?height=400&width=400"
                   alt="Nicole - Your Childcare Course Instructor"
                   width={400}
                   height={400}
                   className="rounded-xl shadow-lg"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
+              {/* <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
                 <div className="flex items-center space-x-2">
                   <Star className="h-5 w-5 text-yellow-500 fill-current" />
                   <span className="font-semibold">4.9/5 Rating</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -156,19 +158,19 @@ export default function HomePage() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Course Levels</h2>
           <p className="text-xl text-gray-600 mb-12">Choose the level that matches your career goals</p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { level: "Level 2", title: "Foundation", description: "Basic childcare principles and practices" },
-              { level: "Level 3", title: "Advanced", description: "Comprehensive childcare and development" },
-              { level: "Level 4", title: "Professional", description: "Leadership and management skills" },
-              { level: "Level 5", title: "Expert", description: "Advanced practice and specialization" },
+              { level: 2, title: "Early Years Practitioner", description: "Basic childcare principles and practices" },
+              { level: 3, title: "Early Years Educator", description: "Comprehensive childcare and development" },
+              // { level: "Level 4", title: "Professional", description: "Leadership and management skills" },
+              { level: 5, title: "Leadership in Children &Young People's service", description: "Advanced practice and specialization" },
             ].map((course, index) => (
               <Card key={index} className="p-6 border-0 shadow-lg hover:shadow-xl transition-shadow bg-white">
                 <CardContent className="pt-6 text-center">
                   <div className="bg-gradient-to-br from-orange-500 to-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
-                    {index + 2}
+                    {course.level}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{course.level}</h3>
+                  <h3 className="text-xl font-semibold mb-2">Level {course.level}</h3>
                   <h4 className="text-lg text-orange-600 font-medium mb-2">{course.title}</h4>
                   <p className="text-gray-600 text-sm">{course.description}</p>
                 </CardContent>
@@ -187,13 +189,20 @@ export default function HomePage() {
           <Card className="p-8 border-0 shadow-lg bg-gradient-to-br from-orange-50 to-pink-50">
             <CardContent className="pt-6">
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-2">
+                <div
+                  className="flex items-center justify-center space-x-2"
+                  style={{ overflowWrap: "anywhere" }}
+                >
                   <Mail className="h-5 w-5 text-orange-600" />
-                  <span className="text-gray-700">nicole@learning.com</span>
+                  <a href="mailto:director@learningwithnicoleltd.co.uk">
+                    <span className="text-gray-700">director@learningwithnicoleltd.co.uk</span>
+                  </a>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="h-5 w-5 text-orange-600" />
-                  <span className="text-gray-700">+44 20 1234 5678</span>
+                  <a href="tel:+447482122810">
+                    <span className="text-gray-700">+44 7482122810</span>
+                  </a>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="h-5 w-5 text-orange-600" />
@@ -204,7 +213,9 @@ export default function HomePage() {
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-3 text-lg"
               >
-                Contact Me Today
+                <a href="mailto:director@learningwithnicoleltd.co.uk">
+                  Contact Me Today
+                </a>
               </Button>
             </CardContent>
           </Card>
@@ -224,7 +235,7 @@ export default function HomePage() {
                 <p className="text-sm text-gray-400">Early Year Online Course</p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm">© 2024 Learning with Nicole. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2025 Learning with Nicole LTD. All rights reserved.</p>
           </div>
         </div>
       </footer>
