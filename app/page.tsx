@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { GraduationCap, Star, Users, Clock, Award, Mail, Phone, MapPin } from "lucide-react"
 import Image from "next/image"
+import { courses } from "./content/courses"
+import CourseCard from "./view/courseCard"
 
 export default function HomePage() {
   return (
@@ -40,15 +42,13 @@ export default function HomePage() {
             Professional • Minimalist • Cheerful Courses
           </Badge>
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Jump into the exciting world of the{" "}
+            Start Your Future in {" "}
             <span className="bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
-              online Diploma in Childcare
-            </span>{" "}
-            course
+              Childcare, Business and Management
+            </span>
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Your adventure in shaping young minds starts here! Professional training designed to help you excel in early
-            childhood education.
+            Our adventure in shaping young minds starts here! Professional training designed to help you excel in childcare, business management, and assessor career fields in London.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -56,7 +56,7 @@ export default function HomePage() {
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-3 text-lg"
             >
               <a href="#courses">
-                Explore Courses
+                Explore Certified Courses
               </a>
             </Button>
             {/* <Button
@@ -64,14 +64,14 @@ export default function HomePage() {
               variant="outline"
               className="border-orange-300 text-orange-700 hover:bg-orange-50 px-8 py-3 text-lg bg-transparent"
             >
-              Learn More
+              <a href="#features">Features</a>
             </Button> */}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section id="features" className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <Card className="text-center p-6 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
             <CardContent className="pt-6">
@@ -97,7 +97,7 @@ export default function HomePage() {
                 <Award className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Certified Diploma</h3>
-              <p className="text-gray-600">Earn a recognized qualification in childcare and early years</p>
+              <p className="text-gray-600">Earn a recognised qualification while studying or working</p>
             </CardContent>
           </Card>
         </div>
@@ -106,7 +106,7 @@ export default function HomePage() {
       {/* About Section */}
       <section id="about" className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-[6fr_4fr] gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 <span className="text-orange-600">About</span> Me
@@ -138,7 +138,7 @@ export default function HomePage() {
                   alt="Nicole - Your Childcare Course Instructor"
                   width={400}
                   height={400}
-                  className="rounded-xl shadow-lg"
+                  className="rounded-xl shadow-lg w-full h-full"
                 />
               </div>
               {/* <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
@@ -153,29 +153,13 @@ export default function HomePage() {
       </section>
 
       {/* Course Levels Section */}
-      <section id="courses" className="container mx-auto px-4 py-16 bg-white/50">
+      <section id="courses" className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Course Levels</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Certified Diploma Courses</h2>
           <p className="text-xl text-gray-600 mb-12">Choose the level that matches your career goals</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { level: 2, title: "Early Years Practitioner", description: "Basic childcare principles and practices" },
-              { level: 3, title: "Early Years Educator", description: "Comprehensive childcare and development" },
-              // { level: "Level 4", title: "Professional", description: "Leadership and management skills" },
-              { level: 5, title: "Leadership in Children &Young People's service", description: "Advanced practice and specialization" },
-            ].map((course, index) => (
-              <Card key={index} className="p-6 border-0 shadow-lg hover:shadow-xl transition-shadow bg-white">
-                <CardContent className="pt-6 text-center">
-                  <div className="bg-gradient-to-br from-orange-500 to-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
-                    {course.level}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Level {course.level}</h3>
-                  <h4 className="text-lg text-orange-600 font-medium mb-2">{course.title}</h4>
-                  <p className="text-gray-600 text-sm">{course.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {courses.map((course, index) => (CourseCard(index, course)))}
           </div>
         </div>
       </section>
