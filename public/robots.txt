@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://learningwithnicole.com/sitemap.xml
+
+# Override any v0 platform metadata
+# Ensure our custom descriptions are used
