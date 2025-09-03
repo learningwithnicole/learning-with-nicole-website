@@ -3,7 +3,7 @@ import { Course } from "../model/course";
 export const courses: Course[] = [
     {
         title: "ICQ Level 2 Early Years Practitioner",
-        price: 1299,
+        price: 799,
         duration: "12 months",
         fastTrack: true,
         assessment: "Portfolio of evidence and work-based learning",
@@ -12,8 +12,8 @@ export const courses: Course[] = [
         fianncialOption: true,
     },
     {
-        title: "ICQ Level 3 Diploma in Early Years Educators",
-        price: 1399,
+        title: "NCFE Level 3 Diploma in Early Years Educators",
+        price: 1000,
         duration: "12 months",
         fastTrack: true,
         assessment: "Portfolio of evidence and work-based learning",
@@ -23,8 +23,8 @@ export const courses: Course[] = [
         fianncialOption: true,
     },
     {
-        title: "ICQ Level 3 Business and Management",
-        price: 1499,
+        title: "ICQ Level 3 Business and Admin",
+        price: 1099,
         duration: "12 months",
         assessment: "Portfolio of evidence and work-based learning",
         topicsLearned: "Leadership, business communication, project management",
@@ -36,7 +36,7 @@ export const courses: Course[] = [
     },
     {
         title: "ICQ Level 3 Certificate in Assessing Vocational Achievement (CAVA)",
-        price: 669,
+        price: 500,
         duration: "9 months",
         fastTrack: true,
         assessment: "Portfolio of evidence",
@@ -48,7 +48,7 @@ export const courses: Course[] = [
     },
     {
         title: "ICQ Level 5 Diploma in Leadership for Children and Young People's Services",
-        price: 2099,
+        price: 1799,
         duration: "18 months",
         assessment: "Portfolio of evidence and work-based learning in the early years setting",
         targetAudience: "Early years supervisors and managers",
@@ -58,7 +58,7 @@ export const courses: Course[] = [
     },
     {
         title: "ICQ Level 3 Diploma for Residential Childcare",
-        price: 1599,
+        price: 1099,
         duration: "18 months",
         fastTrack: true,
         assessment: "Portfolio of evidence and work-based learning in the residential childcare field",
