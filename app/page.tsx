@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { GraduationCap, Users, Clock, Award, Mail, Phone, MapPin, SquareArrowOutUpRight } from "lucide-react"
+import { GraduationCap, Users, Clock, Award, Mail, Phone, MapPin, SquareArrowOutUpRight, ShieldCheck, Copyright, Building2 } from "lucide-react"
 import Image from "next/image"
 import { courses } from "./content/courses"
 import CourseCard from "./view/courseCard"
@@ -29,7 +29,7 @@ export default function HomePage() {
               Courses
             </a>
             <a href="#contact" className="text-gray-700 hover:text-orange-600 transition-colors">
-              Contact
+              Apply
             </a>
           </nav>
         </div>
@@ -59,6 +59,7 @@ export default function HomePage() {
                 Explore Certified Courses
               </a>
             </Button>
+
             {/* <Button
               size="lg"
               variant="outline"
@@ -67,6 +68,10 @@ export default function HomePage() {
               <a href="#features">Features</a>
             </Button> */}
           </div>
+          <a className="md:flex items-center justify-center mt-4" href="#contact">
+            <ShieldCheck size={20} className="inline-block text-gray-500" />
+            <p className="text-sm text-gray-500 underline"> 14-Day Money-Back Guarantee</p>
+          </a>
         </div>
       </section>
 
@@ -165,47 +170,29 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 py-16">
+      <section id="contact" className="container mx-auto px-4 py-16 min-h-screen flex items-center justify-center">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get Started Today</h2>
-          <p className="text-xl text-gray-600 mb-8">Ready to begin your childcare education journey?</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get Started with Confidence</h2>
+          <p className="text-xl text-gray-600 mb-8 break-all">
+            <span className="bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
+              14-Day Risk-Free Guarantee
+            </span>
+            <br />
+            We're so confident you'll love it that we give you two weeks to try it out.<br />
+            If you don't, simply let us know and we'll give you a full refund. <br /><br />
+            No questions asked. It's that easy.
+          </p>
 
-           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button
               size="lg"
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-3 text-lg"
             >
               <a href="https://forms.gle/znCyyacUowmaXJf2A" target="_blank" rel="noopener noreferrer">
-                 <SquareArrowOutUpRight className="inline-block" /> Apply Here 
+                <SquareArrowOutUpRight className="inline-block" /> Apply Here
               </a>
             </Button>
           </div>
-
-          <Card className="p-8 border-0 shadow-lg bg-gradient-to-br from-orange-50 to-pink-50">
-            <CardContent className="pt-6">
-              <div className="grid md:grid-cols-3 gap-6">
-                <div
-                  className="flex items-center justify-center space-x-2"
-                  style={{ overflowWrap: "anywhere" }}
-                >
-                  <Mail className="h-5 w-5 text-orange-600" />
-                  <a href="mailto:director@learningwithnicoleltd.co.uk">
-                    <span className="text-gray-700">director@learningwithnicoleltd.co.uk</span>
-                  </a>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <Phone className="h-5 w-5 text-orange-600" />
-                  <a href="tel:+447482122810">
-                    <span className="text-gray-700">+44 7482122810</span>
-                  </a>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <MapPin className="h-5 w-5 text-orange-600" />
-                  <span className="text-gray-700">London, UK</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
@@ -222,7 +209,29 @@ export default function HomePage() {
                 <p className="text-sm text-gray-400">Early Year Online Course</p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm">© 2025 Learning with Nicole LTD. All rights reserved.</p>
+            <div className="text-gray-400 text-sm flex flex-col">
+              <div className="flex items-center space-x-2 mt-2">
+                <Building2 className="h-5 w-5" />
+                <span>Company Number 15942500</span>
+              </div>
+              <div className="flex items-center space-x-2 mt-2">
+                <Mail className="h-5 w-5" />
+                <a href="mailto:director@learningwithnicoleltd.co.uk">
+                  director@learningwithnicoleltd.co.uk
+                </a>
+              </div>
+              <div className="flex items-center space-x-2 mt-2">
+                <Phone className="h-5 w-5" />
+                <a href="tel:+447482122810">+44 7482122810</a>
+              </div>
+              <div className="flex items-center space-x-2 mt-2">
+                <MapPin className="h-5 w-5" /><span>London, UK</span>
+              </div>
+              <div className="flex items-center space-x-2 mt-2">
+                <Copyright className="h-5 w-5" />
+                <span>{new Date().getFullYear()} Learning with Nicole LTD. All rights reserved</span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
