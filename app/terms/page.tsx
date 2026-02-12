@@ -165,6 +165,9 @@ export default function TermsPage() {
           <li>
             <strong>1.5% monthly interest</strong> on outstanding balances until payment is received in full.
           </li>
+          <li>
+            Fail to apply the late and overdue rules, your laser learning and personal tutor will be suspended until the policy is applied.
+          </li>
         </ul>
         <p className="text-gray-700">
           This policy applies to all learners, sponsors, brokers, and partners.
@@ -196,7 +199,7 @@ export default function TermsPage() {
           you may apply for our <strong>Fast Track Support</strong> (3‑month completion plan).
         </p>
         <p className="text-gray-700">
-          Cost: <strong>£1,255</strong> (includes Laser Learning access, personal tutor, and intensive support).
+          Cost: <strong>£1,299</strong> (includes Laser Learning access, personal tutor, and intensive support).
         </p>
         <p className="text-gray-700 font-medium">Important notes:</p>
         <ul className="list-disc list-inside text-gray-700 space-y-1">
