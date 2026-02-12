@@ -1,8 +1,22 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { GraduationCap, Users, Clock, Award, Mail, Phone, MapPin, SquareArrowOutUpRight, ShieldCheck, Copyright, Building2 } from "lucide-react"
+import {
+  GraduationCap,
+  Users,
+  Clock,
+  Award,
+  Handshake,
+  Mail,
+  Phone,
+  MapPin,
+  SquareArrowOutUpRight,
+  ShieldCheck,
+  Copyright,
+  Building2,
+} from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { courses } from "./content/courses"
 import CourseCard from "./view/courseCard"
 
@@ -230,6 +244,12 @@ export default function HomePage() {
               <div className="flex items-center space-x-2 mt-2">
                 <Copyright className="h-5 w-5" />
                 <span>{new Date().getFullYear()} Learning with Nicole LTD. All rights reserved</span>
+              </div>
+              <div className="flex items-center space-x-2 mt-2">
+                <Handshake className="h-5 w-5" />
+                <Link href="/terms" className="underline hover:text-white">
+                  <span>Learner Agreement & Terms</span>
+                </Link>
               </div>
             </div>
           </div>
