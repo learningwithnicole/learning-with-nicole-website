@@ -22,10 +22,12 @@ export const metadata: Metadata = {
   description: 'Start your childcare career with our accredited online diploma. Gain the skills and knowledge to work with children in home-based care, early years education, and more.',
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon.ico', sizes: 'any' },
     ],
-    apple: '/favicon.svg',
+    apple: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/icon.ico',
   },
   openGraph: {
     title: `${contact.service.name} | Online Diploma in Childcare`,

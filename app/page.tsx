@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-  GraduationCap,
   Users,
   Clock,
   Award,
@@ -14,6 +13,7 @@ import SiteFooter from "./view/site-footer"
 import { courses } from "./content/courses"
 import CourseCard from "./view/courseCard"
 import { contact } from "./content/contact"
+import LogoGradient from "@/app/view/logo-gradient"
 
 export default function HomePage() {
   return (
@@ -22,9 +22,7 @@ export default function HomePage() {
       <header className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="bg-gradient-to-br from-orange-500 to-pink-500 p-2 rounded-xl">
-              <GraduationCap className="h-8 w-8 text-white" />
-            </div>
+            <LogoGradient className="h-14 w-14" />
             <div>
               <h1 className="text-xl font-bold text-gray-900">{contact.service.name}</h1>
               <p className="text-sm text-gray-600">{contact.service.description}</p>

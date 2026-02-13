@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { GraduationCap } from "lucide-react"
 import SiteFooter from "../view/site-footer"
 import { contact } from "../content/contact"
+import LogoGradient from "../view/logo-gradient"
 
 export default function TermsPage() {
   return (
@@ -10,9 +10,7 @@ export default function TermsPage() {
       <header className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="bg-gradient-to-br from-orange-500 to-pink-500 p-2 rounded-xl">
-              <GraduationCap className="h-8 w-8 text-white" />
-            </div>
+            <LogoGradient className="h-14 w-14 text-orange-500" />
             <div>
               <h1 className="text-xl font-bold text-gray-900">{contact.service.name}</h1>
               <p className="text-sm text-gray-600">{contact.service.description}</p>

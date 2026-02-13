@@ -2,13 +2,13 @@ import Link from "next/link"
 import {
   Building2,
   Copyright,
-  GraduationCap,
   Handshake,
   Mail,
   MapPin,
   Phone,
 } from "lucide-react"
 import { contact } from "@/app/content/contact"
+import Logo from "./logo"
 
 export default function SiteFooter() {
   return (
@@ -16,9 +16,7 @@ export default function SiteFooter() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-3 mb-4 md:mb-0">
-            <div className="bg-gradient-to-br from-orange-500 to-pink-500 p-2 rounded-xl">
-              <GraduationCap className="h-6 w-6 text-white" />
-            </div>
+            <Logo className="h-14 w-14 text-white" />
             <div>
               <h3 className="font-bold">{contact.service.name}</h3>
               <p className="text-sm text-gray-400">{contact.service.description}</p>
