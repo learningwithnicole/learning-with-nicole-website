@@ -6,19 +6,14 @@ import {
   Users,
   Clock,
   Award,
-  Handshake,
-  Mail,
-  Phone,
-  MapPin,
   SquareArrowOutUpRight,
   ShieldCheck,
-  Copyright,
-  Building2,
 } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
+import SiteFooter from "./view/site-footer"
 import { courses } from "./content/courses"
 import CourseCard from "./view/courseCard"
+import { contact } from "./content/contact"
 
 export default function HomePage() {
   return (
@@ -31,8 +26,8 @@ export default function HomePage() {
               <GraduationCap className="h-8 w-8 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Learning with Nicole</h1>
-              <p className="text-sm text-gray-600">Early Year Online Course</p>
+              <h1 className="text-xl font-bold text-gray-900">{contact.service.name}</h1>
+              <p className="text-sm text-gray-600">{contact.service.description}</p>
             </div>
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -210,51 +205,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <div className="bg-gradient-to-br from-orange-500 to-pink-500 p-2 rounded-xl">
-                <GraduationCap className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h3 className="font-bold">Learning with Nicole</h3>
-                <p className="text-sm text-gray-400">Early Year Online Course</p>
-              </div>
-            </div>
-            <div className="text-gray-400 text-sm flex flex-col">
-              <div className="flex items-center space-x-2 mt-2">
-                <Building2 className="h-5 w-5" />
-                <span>Company Number 15942500</span>
-              </div>
-              <div className="flex items-center space-x-2 mt-2">
-                <Mail className="h-5 w-5" />
-                <a href="mailto:director@learningwithnicoleltd.co.uk">
-                  director@learningwithnicoleltd.co.uk
-                </a>
-              </div>
-              <div className="flex items-center space-x-2 mt-2">
-                <Phone className="h-5 w-5" />
-                <a href="tel:+447482122810">+44 7482122810</a>
-              </div>
-              <div className="flex items-center space-x-2 mt-2">
-                <MapPin className="h-5 w-5" /><span>London, UK</span>
-              </div>
-              <div className="flex items-center space-x-2 mt-2">
-                <Copyright className="h-5 w-5" />
-                <span>{new Date().getFullYear()} Learning with Nicole LTD. All rights reserved</span>
-              </div>
-              <div className="flex items-center space-x-2 mt-2">
-                <Handshake className="h-5 w-5" />
-                <Link href="/terms" className="underline hover:text-white">
-                  <span>Learner Agreement & Terms</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
