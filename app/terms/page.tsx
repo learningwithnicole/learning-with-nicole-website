@@ -6,7 +6,6 @@ import LogoGradient from "../view/logo-gradient"
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50">
-      {/* Header */}
       <header className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
@@ -235,28 +234,76 @@ export default function TermsPage() {
 
           <section className="pt-6 mt-6 border-t border-orange-100 space-y-3">
             <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
-              11. Fast Track Option (Transfer Learners)
+              11. Fast Track Programme Policy
             </h2>
+          
             <p className="text-base md:text-lg leading-relaxed text-gray-700">
-              If you previously completed your qualification with another provider but have not received your
-              certificate,
-              you may apply for our <strong>Fast Track Support</strong> (3‑month completion plan).
+              The Fast Track Programme is an intensive learning pathway designed for learners who are able to complete
+              their qualification within a shorter timeframe. The programme normally takes between 2 and 5 months to
+              complete, depending on the learner's progress and assessment outcomes.
             </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-700">
-              Cost: <strong>£1,299</strong> (includes Laser Learning access, personal tutor, and intensive support).
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-700 font-medium">Important notes:</p>
+
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mt-4">11-1. Eligibility</h3>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">The Fast Track Programme is suitable for learners who:</p>
             <ul className="list-disc ml-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
-              <li>Awarding body registration fees must still be paid if you were not previously registered.</li>
-              <li>Existing evidence will be reviewed against ICQ or NCFE standards.</li>
+              <li>Have previously completed relevant coursework with another training provider, or</li>
+              <li>Have prior teaching experience and an appropriate educational background.</li>
+            </ul>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              This programme is intended for learners who already have existing knowledge or experience in the subject area
+              and are able to progress at an accelerated pace.
+            </p>
+
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mt-4">11-2. Trial Period</h3>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              Learners will receive a 14-day free trial period at the beginning of the programme. During this time, learners
+              may access learning materials and confirm that the programme meets their needs.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              The first invoice will be issued after the 14-day free period.
+            </p>
+
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mt-4">11-3. Programme Fees and Payment Structure</h3>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              The intensive programme fee for the Fast Track Programme will be divided into three instalments.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              Learner progression will be clearly communicated when each invoice is issued.
+            </p>
+            <ul className="list-disc ml-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
               <li>
-                Any evidence gaps will be completed through professional discussion, verbal questioning, observation, or
-                work products.
+                <strong>First Instalment (1/3 of the programme fee)</strong><br />
+                Issued when learner progression reaches 30–40%, corresponding to the first Internal Quality Assurance (IQA)
+                sampling stage.
               </li>
-              <li>No full invoice payment is required until {contact.company.name} is prepared to claim your
-                certificate.
+              <li>
+                <strong>Second Instalment (1/3 of the programme fee)</strong><br />
+                Issued when learner progression reaches 60–70%.
+              </li>
+              <li>
+                <strong>Final Instalment (remaining 1/3 of the programme fee)</strong><br />
+                Issued when the learner reaches 100% completion. This stage corresponds to the second IQA sampling, after
+                which the IQA claim can be submitted.
               </li>
             </ul>
+
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mt-4">11-4. Registration Fee</h3>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              The registration fee is charged separately and is not included in the intensive programme fee.
+            </p>
+
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mt-4">11-5. Progress Monitoring</h3>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              Learner progress will be monitored throughout the programme. Progression percentages and assessment stages will
+              be communicated to learners alongside invoice notifications to ensure transparency and clarity regarding
+              programme milestones.
+            </p>
+
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mt-4">11-6. Quality Assurance</h3>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              All learner work will be subject to Internal Quality Assurance (IQA) procedures in accordance with the centre's
+              quality assurance policies.
+            </p>
           </section>
 
           <section className="pt-6 mt-6 border-t border-orange-100 space-y-3">
